@@ -124,8 +124,6 @@ public class MainActivity extends AppCompatActivity {
         drugList.add(drugData);
         drugData = new DrugMainData("혼합형 인슐린", "인슐린 요법",covers[2]);
         drugList.add(drugData);
-
         drugMainAdapter.notifyDataSetChanged();
-
     }
 }

@@ -39,6 +39,7 @@ public class DrugMainAdapter extends RecyclerView.Adapter<DrugMainAdapter.MyView
                     if (pos != RecyclerView.NO_POSITION){
                         DrugMainData clickedDataItem = drugList.get(pos);
                         Intent intent = new Intent(context, DetailActivity.class);
+                        intent.putExtra("position", getAdapterPosition());
                         intent.putExtra("original_name", drugList.get(pos).getDrugName());
                         intent.putExtra("detail", drugList.get(pos).getDrugDetail());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -54,6 +55,7 @@ public class DrugMainAdapter extends RecyclerView.Adapter<DrugMainAdapter.MyView
                     if (pos != RecyclerView.NO_POSITION){
                         DrugMainData clickedDataItem = drugList.get(pos);
                         Intent intent = new Intent(context, DetailActivity.class);
+                        intent.putExtra("position", getAdapterPosition());
                         intent.putExtra("original_name", drugList.get(pos).getDrugName());
                         intent.putExtra("detail", drugList.get(pos).getDrugDetail());
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
